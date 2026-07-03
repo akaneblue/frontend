@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>입력양식</h1>
+    <!-- 
+        form : 서버에 데이터를 전달하기 위해 사용
+
+        action : 요청하려는 페이지의 주소
+        method : 요청방식 (get-기본값, post)
+        name : javascript가 form을 제어하기 위해 사용
+    -->
+    <form action="loginAction.html" method="get" name="loginForm">
+        id : <input type="text" name="id"><br>
+        pw : <input type="password" name="pw"><br>
+        <input type="button" value="로그인">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+    <hr>
+
+    <h1>입력양식의 종류</h1>
+    <form action="loginAction.html">
+        <fieldset>
+            <legend>텍스트 입력양식</legend>
+            <label for="test">text</label> 
+            <input id="test" type="text" value="텍스트 입력" placeholder="아이디를 입력해주세요"><br>
+            <label for="test1">password </label>
+            <input id="test1" type="password" placeholder="비밀번호를 입력하세요"><br>
+            <label for="test2">search</label> 
+            <input type="search" id="test2"><br>
+            <label for="test3">url</label>
+            <input type="url" id="test3"><br>
+            <label for="test4">email</label>
+            <input type="email" name="" id="test4"><br>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

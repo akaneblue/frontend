@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,153 @@
         <li>정기자로 진급하면 장학금 지급</li>
     </ol>
     
-    <img src="/html/img/mic.jpg" alt="camera">
+    <img src="/html/img/mic.jpg" alt="mic img">
+
+    <table border="1px" width="30%">
+        <caption>선물용과 가정용의 상품구성</caption>
+        <thead>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>갯수</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="https://naver.com" target="_blank">
+        <img src="/html/img/salad.jpg" alt="salad" width="50%">
+    </a>
+    <img src="/html/img/salad.jpg" alt="salad" width="700" height="200">
+    <img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fsports.phinf%2Fteam%2Fmlb%2Fdefault%2FOA.png%22&type=f80_80&service=navermain" alt="salad" width="700" height="200">
+    <hr>
+    <h1>링크</h1>
+
+    <a href="/html/레드향.html" target="blank">레드향</a><br>
+    <a href="https://www.naver.com" target="blank">네이버로 이동</a>
+    
+    <hr>
+
+    <h1>오디오 비디오</h1>
+    <audio src="/html/medias/spring.mp3" controls></audio>
+    <p></p>
+    <video src="/html/medias/salad.mp4" width="700" controls></video>
+
+    <hr>
+
+    <h1>pdf파일 삽입</h1>
+    <object data="/html/medias/product.pdf" type="" width="700" height="500"></object>
+
+    <hr>
+
+    <h1>입력양식</h1>
+    <form action="/html/레드향.html">
+        <fieldset>
+            <legend>상품 선택</legend>
+            이름: <input type="text" name="name"><br>
+            취미<br>
+            <input type="checkbox" name="name">
+            <input type="checkbox" name="name">
+            <input type="checkbox" name="name">
+        </fieldset>
+        <fieldset>
+            <legend>배송 정보</legend>
+            이름: <input type="text" name="name">
+        </fieldset>
+        이름: <input type="text" name="name">
+        <input type="submit" value="전송">
+    </form>
+
+    <hr>
+
+    <table border="1px">
+        <tr>
+            <th colspan="2">제목</th>
+            <td>2컨텐츠</td>
+            <td>3컨텐츠</td>
+        </tr>
+        <tr>
+            <th rowspan="2">제목</th>
+            <td>1컨텐츠</td>
+            <td>2컨텐츠</td>
+            <td>3컨텐츠</td>
+        </tr>
+        <tr>
+            <td>1컨텐츠</td>
+            <td>2컨텐츠</td>
+            <td>3컨텐츠</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td>1컨텐츠</td>
+            <td>2컨텐츠</td>
+            <td>3컨텐츠</td>
+        </tr>
+    </table>
+    <table border="1px">
+        <caption>
+            Front-end web developer course 2021
+        </caption>
+        <thead>
+            <tr>
+            <th scope="col">Person</th>
+            <th scope="col">Most interest in</th>
+            <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">Chris</th>
+            <td>HTML tables</td>
+            <td>22</td>
+            </tr>
+            <tr>
+            <th scope="row">Dennis</th>
+            <td>Web accessibility</td>
+            <td>45</td>
+            </tr>
+            <tr>
+            <th scope="row">Sarah</th>
+            <td>JavaScript frameworks</td>
+            <td>29</td>
+            </tr>
+            <tr>
+            <th scope="row">Karen</th>
+            <td>Web performance</td>
+            <td>36</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <th scope="row" colspan="2">Average age</th>
+            <td>33</td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>
