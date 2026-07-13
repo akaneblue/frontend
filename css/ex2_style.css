@@ -1,0 +1,14 @@
+h1{
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+}
+
+.accent{
+    font-weight: bold;
+    color: red;
+}
+
+#container{
+    margin: 10px;
+}

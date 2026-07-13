@@ -1,0 +1,17 @@
+h1{
+    font-size: 2rem;
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    background-color: black;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    color: blue;
+}
+
+body{
+    margin: 0;
+}

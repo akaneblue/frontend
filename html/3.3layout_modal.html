@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+        .modal-backdrop{
+            background-color: #000000ad;
+            inset: 0;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box{
+            background-color: #fff;
+            width: 400px;
+            padding: 20px;
+            position: relative;
+            border-radius: 20px;
+        }
+        .modal-box input{
+            width: 100%;
+            border: 1px solid #ccc;
+            font-size: 1.2rem;
+            padding-left: 10px;
+            margin: 10px 0px;
+        }
+        .modal-close{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: none;
+            background-color: #fff;
+            font-size: 2rem;
+            color: #444;
+        }
+        #loginForm{
+            width: 100%;
+        }
+        #modalTitle{
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 2rem;
+        }
+
+        #modalContents{
+            color: #666;
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        .modal-box h6, .modal-box h3{
+            margin: 0px;
+        }
+            
+        .modal-box .mb-20{
+            margin-bottom: 30px;
+        }
+        /* .w-100{
+            width: 100%;
+        }
+        .bc-blue{
+            background-color: blue;
+        }
+        .boder-none{
+            border: none;
+        }
+        .h-30{
+            height: 30px;
+        }
+        .fs-large{
+            font-size: 1.2rem;
+        }
+        .c-white{
+            color: #fff;
+        } */
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/basic.css">
+</head>
+<body>
+    <!-- 모달을 여는 버튼 -->
+<button id="loginTrigger">로그인</button>
+
+<!-- 평소엔 숨겨져 있는 백드롭 + 모달 -->
+<div class="modal-backdrop show" id="modalBackdrop">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+    <h3 id="modalTitle">로그인</h3>
+    <h6 id="modalContents" class="mb-20">이메일과 비밀번호를 입력하세요</h6>
+    <form id="loginForm">
+      <label for="email">이메일</label>
+      <input type="email" id="email" required class="rounded h-50px">
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" required class="rounded h-50px">
+
+      <button type="submit" class="btn w-100 bg-primary boder-none h-30 fs-large text-white rounded h-50px mt-5">로그인</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

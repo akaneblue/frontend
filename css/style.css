@@ -1,0 +1,35 @@
+/* 
+    css 선택자
+    class : .
+    id : #
+    tag : 태그 이름
+
+    선택자 {
+        스타일 속성을 적용
+    }
+*/
+p,h3 {
+    background-color: aliceblue;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* 
+class를 이용해서 요소의 스타일을 적용
+1. 스타일 정의
+2. 요소의 class속성에 값을 입력
+*/
+
+.red{
+    color: red;
+}
+
+#name{
+    color: red;
+}
+
+p{
+    background-color: #fff;
+    margin: 10px;
+}
