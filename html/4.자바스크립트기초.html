@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>console.log("head tag", document.querySelector("h1"));</script>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+
+
+    <script>
+        for(let i = 2; i < 10; i++){
+            // if(i > 3){
+            //     break;    
+            // }
+            if(i % 2 == 0){
+                continue;
+            }
+            console.log(i + "단");
+            for(let j = 1; j < 10; j++){
+            console.log(`${i} * ${j} = ${i * j}`);
+            }
+        }
+
+    </script>
+    <script src="/js/main/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>로또 생성기</h1>
+    <button class="lotto_btn" onclick="lotto()">생성</button>
+    <div class="box"></div>
+
+    <script>
+      function lotto() {
+        let lotto = new Set();
+        while (lotto.size < 6) {
+          let num = parseInt(Math.random() * 47 + 1);
+          lotto.add(num);
+        }
+
+        let box = document.querySelector(".box");
+        box.innerHTML = "";
+        lotto.forEach((item, idx) => {
+          console.log(item);
+          box.innerHTML += item + " ";
+        });
+      }
+
+      let movie = {
+        title: "스텔라 오디세이",
+        genre: "SF 액션",
+        rating: 9.2,
+        play: function () {
+          console.log("재생");
+        },
+      };
+
+      console.log(movie.title);
+      console.log(movie["rating"]);
+      movie.play();
+
+      let movie_str = JSON.stringify(movie);
+      let obj = JSON.parse(movie_str);
+    </script>
+  </body>
+</html>

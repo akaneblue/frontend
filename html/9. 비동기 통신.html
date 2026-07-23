@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(1)
+        console.log(2)
+        setTimeout(() => {
+            console.log(3)    
+        }, 1000);
+        
+        let obj = new Promise((resolve, reject) =>{
+            // reject('rejected()호출');
+        })
+
+        obj.then().catch()
+
+        function delay(ms, msg){
+            return new Promise((resolve, reject) =>{
+                setTimeout(() => {
+                    console.log(msg);
+                    console.log(`${msg} 종료`);
+                }, ms)
+            })
+        }
+
+        let promise = delay(1000, '음료 주문')
+        promise.then((res) =>{
+            console.log(res)
+            return delay(500, '음료 제조')
+        }).then((res) => {
+            delay(1000, '서빙')
+        });
+
+        async function init(){
+            let box = document.querySelector(".box");
+            let res = await fetch('http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&detail=Y&actor=%ED%95%9C%EC%A7%80%EB%AF%BC&ServiceKey=11M1LX721SFQ42K7AQ6R')
+            console.log("fetch res", res);
+            let json = await res.json();
+            console.log("json res",json)
+            console.log(json.Data[0].Result)
+            let result = json.Data[0].Result;
+            result.forEach(element => {
+                box.innerHTML += `<p>${element.title}</p>`
+            });
+        }
+
+
+        window.addEventListener("load", () =>{
+            init()
+        })
+
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

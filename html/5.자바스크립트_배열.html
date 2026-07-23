@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function welcome(){
+            console.log("무비 컬렉션에 오신것을 환영합니다");
+            let box = doccument.querySelector(".box");
+            box.innerText = "무비컬렉션에 오신것을 환영합니다";
+        }
+
+        let welcome2 = function(){
+            console.log("무비컬렉션에 오신것을 환영합니다");
+        }
+
+        let welcome3 = () => {
+            console.log("무비컬렉션에 오신것을 환영합니다");
+        }
+        
+    </script>
+
+    <div class="box"></div>
+</body>
+</html>

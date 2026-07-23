@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1
+      function rnrneks(dan) {
+        for (let i = 1; i < 10; i++) {
+          console.log(`${dan} * ${i} = ${dan * i}`);
+        }
+      }
+
+      // for(let i = 1; i < 10; i++){
+      //     rnrneks(i);
+      // }
+
+      // 2
+      // for(let i = 1; i < 10; i++){
+      //     // 짝수만
+      //     if(i % 2 == 0){
+      //         rnrneks(i);
+      //     }
+
+      //     // 홀수만
+      //     if(i % 2 != 0){
+      //         rnrneks(i);
+      //     }
+
+      //     // 3의 배수만
+      //     if(i % 3 == 0){
+      //         rnrneks(i);
+      //     }
+      // }
+
+      // 3
+      let dan = new Array();
+      let i = 1;
+
+      while (i < 10) {
+        let result = new Array();
+        for (let j = 1; j < 10; j++) {
+          result.push(i * j);
+        }
+        dan[i - 1] = result;
+        i++;
+      }
+    </script>
+  </head>
+  <body>
+    <table class="table" border="1"></table>
+
+    <script>
+      //심화
+      for (let i = 1; i < 10; i++) {
+        table = document.querySelector(".table");
+        const newTr = document.createElement("tr");
+        for (let j = 1; j < 10; j++) {
+          const newTd = document.createElement("td");
+          newTd.innerText = i * j;
+          newTr.appendChild(newTd);
+        }
+        table.appendChild(newTr);
+      }
+    </script>
+  </body>
+</html>
